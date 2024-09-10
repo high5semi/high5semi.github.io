@@ -5,21 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>High5 Semiconductor</title>
   <style>
-    /* 页面设置 */
-    html, body {
+    /* 页面设置：移除默认边距 */
+    body {
       margin: 0;
       padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh; /* 页面高度 */
-      background-color: #f0f0f0; /* 背景颜色，确保海报周围有视觉对比 */
+      min-height: 100vh; /* 确保图片在页面中央 */
+      background-color: #f0f0f0; /* 背景颜色，可以根据需要调整 */
     }
 
     /* 海报图片容器 */
     .poster-container {
       position: relative;
-      text-align: center;
+      display: inline-block; /* 保证图片根据内容大小显示 */
     }
 
     /* 右上角的logo和文字 */
@@ -35,7 +35,7 @@
 
     /* 设置logo图片的大小 */
     .top-right img {
-      width: 80px; /* 调整logo大小 */
+      width: 50px; /* 调整logo大小 */
       height: auto;
     }
 
