@@ -5,51 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>High5 Semiconductor</title>
   <style>
-    /* 设置页面背景为poster.jpg */
-    body {
+    /* 页面设置 */
+    html, body {
       margin: 0;
       padding: 0;
-      background-image: url('Poster.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 100vh; /* 视口高度 */
-      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* 页面高度 */
+      background-color: #f0f0f0; /* 背景颜色，确保海报周围有视觉对比 */
     }
 
-    /* 创建一个用于放置logo和文字的容器 */
+    /* 海报图片容器 */
+    .poster-container {
+      position: relative;
+      text-align: center;
+    }
+
+    /* 右上角的logo和文字 */
     .top-right {
       position: absolute;
       top: 10px;
       right: 10px;
       text-align: center;
+      background-color: rgba(0, 0, 0, 0.5); /* 半透明背景，确保文字清晰可见 */
+      padding: 5px;
+      border-radius: 8px;
     }
 
     /* 设置logo图片的大小 */
     .top-right img {
-      width: 120px; /* 调整logo大小 */
+      width: 80px; /* 调整logo大小 */
       height: auto;
     }
 
     /* 设置文字的样式 */
     .top-right p {
       margin: 5px 0;
-      font-size: 12px; /* 字体大小较小 */
-      color: black; /* 文字颜色可以根据背景调整 */
+      font-size: 10px; /* 字体大小较小 */
+      color: black; /* 文字颜色 */
       font-weight: bold;
     }
   </style>
 </head>
 <body>
 
-  <!-- 右上角的logo和文字内容 -->
-  <div class="top-right">
-    <img src="logo.jpg" alt="high5semi">
-    <p>High-Speed</p>
-    <p>High-Power</p>
-    <p>High-Linearity</p>
-    <p>High-Integration</p>
-    <p>High-Q-factor</p>
+  <!-- 海报图片容器 -->
+  <div class="poster-container">
+    <img src="Poster.jpg" alt="Poster Image">
+
+    <!-- 右上角的logo和文字内容 -->
+    <div class="top-right">
+      <img src="logo.jpg" alt="high5semi">
+      <p>High-Speed</p>
+      <p>High-Power Efficiency</p>
+      <p>High-Linearity</p>
+      <p>High-Integration</p>
+      <p>High-Q-factor</p>
+    </div>
   </div>
 
 </body>
