@@ -12,14 +12,21 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh; /* 确保图片在页面中央 */
-      background-color: #f0f0f0; /* 背景颜色，可以根据需要调整 */
+      height: 100vh; /* 页面高度 */
+      background-color: #f0f0f0; /* 背景颜色 */
     }
 
     /* 海报图片容器 */
     .poster-container {
       position: relative;
-      display: inline-block; /* 保证图片根据内容大小显示 */
+      width: 50%; /* 设置图片的宽度为页面宽度的50% */
+      max-width: 800px; /* 最大宽度为800px，避免图片过大 */
+    }
+
+    /* 让海报图片自适应容器大小 */
+    .poster-container img {
+      width: 100%;
+      height: auto; /* 保持图片比例 */
     }
 
     /* 右上角的logo和文字 */
@@ -43,7 +50,7 @@
     .top-right p {
       margin: 5px 0;
       font-size: 10px; /* 字体大小较小 */
-      color: black; /* 文字颜色 */
+      color: white; /* 文字颜色 */
       font-weight: bold;
     }
   </style>
