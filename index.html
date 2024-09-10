@@ -5,64 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>High5 Semiconductor</title>
   <style>
-    /* 页面基础设置，移除默认边距和填充 */
+    /* 页面基础设置：移除默认边距和填充 */
     body {
       margin: 0;
       padding: 0;
+      height: 100vh;
+      background-color: #f0f0f0; /* 设置浅灰色背景 */
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh; /* 页面高度 */
-      background-color: #f0f0f0; /* 背景颜色 */
-      font-family: Arial, sans-serif; /* 全局字体 */
+      position: relative; /* 用于定位右上角的内容 */
     }
 
-    /* 右上角的logo和文字 */
+    /* 右上角的Logo和文字 */
     .top-right {
       position: absolute;
-      top: 10px;
-      right: 10px;
-      text-align: left; /* 左对齐内容 */
-      background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+      top: 20px;
+      right: 20px;
+      background-color: rgba(0, 0, 0, 0.6); /* 半透明的黑色背景 */
       padding: 10px;
       border-radius: 8px;
-      color: white; /* 文字颜色 */
+      color: balck; /* 白色字体 */
+      text-align: left; /* 左对齐文字 */
     }
 
-    /* 设置logo图片的大小 */
+    /* Logo的大小 */
     .top-right img {
-      width: 50px; /* 调整logo大小 */
+      width: 50px; /* Logo宽度 */
       height: auto;
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 10px; /* 在Logo和文字之间留一些间距 */
     }
 
     /* 设置文字的样式 */
     .top-right p {
       margin: 5px 0;
-      font-size: 12px; /* 字体大小 */
-      font-weight: bold;
+      font-size: 14px; /* 调整字体大小 */
+      font-weight: bold; /* 加粗字体 */
+      text-transform: uppercase; /* 将所有字母大写 */
     }
 
     /* 海报图片容器 */
     .poster-container {
-      width: 50%; /* 图片宽度为页面宽度的50% */
-      max-width: 900px; /* 最大宽度为800px */
-      text-align: center; /* 图片居中对齐 */
+      max-width: 600px; /* 限制海报最大宽度为600px */
+      width: 80%; /* 默认占页面宽度的80% */
+      text-align: center; /* 图片居中 */
     }
 
     /* 让海报图片自适应容器大小 */
     .poster-container img {
-      width: 100%;
-      height: auto; /* 保持图片比例 */
+      width: 100%; /* 图片宽度为容器的100% */
+      height: auto; /* 保持图片的比例 */
+      border: 2px solid #ddd; /* 给图片加个浅色边框 */
+      border-radius: 10px; /* 圆角修饰 */
     }
   </style>
 </head>
 <body>
 
-  <!-- 右上角的logo和文字内容 -->
+  <!-- 右上角的Logo和5个High特性 -->
   <div class="top-right">
-    <img src="logo.jpg" alt="high5semi">
+    <img src="logo.jpg" alt="High5 Semiconductor Logo">
     <p>High-Speed</p>
     <p>High-Power</p>
     <p>High-Linearity</p>
