@@ -3,29 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Full Screen Image</title>
+  <title>High5 Semiconductor</title>
   <style>
-    * {
+    /* 设置页面背景为poster.jpg */
+    body {
       margin: 0;
       padding: 0;
-      overflow: hidden;
+      background-image: url('Poster.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh; /* 视口高度 */
+      font-family: Arial, sans-serif;
     }
-    html, body {
-      height: 100%;
+
+    /* 创建一个用于放置logo和文字的容器 */
+    .top-right {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      text-align: center;
     }
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
+    /* 设置logo图片的大小 */
+    .top-right img {
+      width: 120px; /* 调整logo大小 */
+      height: auto;
     }
-    img {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
+
+    /* 设置文字的样式 */
+    .top-right p {
+      margin: 5px 0;
+      font-size: 12px; /* 字体大小较小 */
+      color: black; /* 文字颜色可以根据背景调整 */
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <img src="Poster.jpg" alt="Full Screen Image">
+
+  <!-- 右上角的logo和文字内容 -->
+  <div class="top-right">
+    <img src="logo.jpg" alt="high5semi">
+    <p>High-Speed</p>
+    <p>High-Power</p>
+    <p>High-Linearity</p>
+    <p>High-Integration</p>
+    <p>High-Q-factor</p>
+  </div>
+
 </body>
 </html>
