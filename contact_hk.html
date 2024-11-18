@@ -15,66 +15,113 @@
         header {
             background-color: white;
             color: #0F4499;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 15px;
+            text-align: center;
         }
         header h1 {
             margin: 0;
             padding: 0;
+            font-size: 1.5em;
         }
         header img {
-            height: 80px;
+            height: 200px; /* 電腦端logo尺寸 */
+            margin-top: 15px;
         }
         nav {
+            background-color: white;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        .nav-links {
             display: flex;
             justify-content: center;
-            background-color: white;
-            padding: 10px 0;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         nav a {
             color: #0F4499;
-            padding: 0 15px;
+            padding: 8px 15px;
             text-decoration: none;
             text-align: center;
             font-weight: bold;
+            white-space: nowrap;
         }
         nav a:hover, nav .active {
             background-color: #ddd;
             color: black;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
         .language-switch {
-            margin-left: 20px;
+            text-align: center;
+            margin-top: 10px;
+            padding: 5px;
         }
         main {
-            padding: 20px;
+            padding: 15px;
             max-width: 800px;
             margin: 0 auto;
         }
-        .contact-info {
-            display: flex;
-            align-items: center;
-        }
-        .qr-code {
-            margin-left: 10px;
-        }
-        footer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 15px;
+        .contact-container {
             background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
             color: #0F4499;
+            margin-top: 0;
+        }
+        .contact-info {
             margin-top: 20px;
         }
-        footer img {
-            height: 100px;
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .qr-code-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .qr-code img {
+            width: 150px;
+            height: auto;
+        }
+        footer {
+            background-color: white;
+            color: #0F4499;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
         }
         .footer-text {
             line-height: 1.8;
-            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 移動端適配 */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.2em;
+            }
+            header img {
+                height: 100px; /* 移動端logo尺寸 */
+            }
+            nav {
+                padding: 5px;
+            }
+            nav a {
+                padding: 6px 12px;
+                font-size: 0.9em;
+            }
+            .qr-code img {
+                width: 100px;
+            }
+            .contact-container {
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -84,12 +131,14 @@
         <img src="logo.png" alt="公司標誌">
     </header>
     <nav>
-        <a href="home_hk.html">首頁</a>
-        <a href="news_hk.html">新聞</a>
-        <a href="products_hk.html">產品</a>
-        <a href="design_service_hk.html">設計服務</a>
-        <a href="members_hk.html">成員</a>
-        <a href="contact_hk.html" class="active">聯絡我們</a>
+        <div class="nav-links">
+            <a href="home_hk.html">首頁</a>
+            <a href="news_hk.html">新聞</a>
+            <a href="products_hk.html">產品</a>
+            <a href="design_service_hk.html">設計服務</a>
+            <a href="members_hk.html">成員</a>
+            <a href="contact_hk.html" class="active">聯絡我們</a>
+        </div>
         <div class="language-switch">
             <a href="contact_en.html">Eng</a> | 
             <a href="contact_cn.html">简体中文</a> | 
@@ -97,13 +146,17 @@
         </div>
     </nav>
     <main>
-        <h2>聯絡資訊</h2>
-        <p><strong>電郵:</strong> high5semi@gmail.com</p>
-        <p><strong>地址:</strong> 香港新界香港科學園5W大樓5樓309B室</p>
-        <div class="contact-info">
-            <p><strong>微信:</strong></p>
-            <div class="qr-code">
-                <img src="high5semi QR code.jpg" alt="微信二維碼" width="100">
+        <div class="contact-container">
+            <h2>聯絡資訊</h2>
+            <div class="contact-info">
+                <p><strong>電郵:</strong> high5semi@gmail.com</p>
+                <p><strong>地址:</strong> 香港新界香港科學園5W大樓5樓309B室</p>
+            </div>
+            <div class="qr-code-container">
+                <p><strong>微信:</strong></p>
+                <div class="qr-code">
+                    <img src="high5semi QR code.jpg" alt="微信二維碼">
+                </div>
             </div>
         </div>
     </main>
