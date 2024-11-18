@@ -24,8 +24,8 @@
             font-size: 1.5em;
         }
         header img {
-            height: 60px;
-            margin-top: 10px;
+            height: 100px;  /* 增大了logo尺寸 */
+            margin-top: 15px;
         }
         nav {
             background-color: white;
@@ -70,23 +70,14 @@
         footer {
             background-color: white;
             color: #0F4499;
-            padding: 15px;
+            padding: 20px;
             margin-top: 20px;
-        }
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             text-align: center;
-            gap: 15px;
         }
         .footer-text {
             line-height: 1.8;
-        }
-        footer img {
-            height: 60px;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         /* 移动端适配 */
@@ -95,7 +86,7 @@
                 font-size: 1.2em;
             }
             header img {
-                height: 50px;
+                height: 80px;  /* 移动端稍微缩小logo */
             }
             nav {
                 padding: 5px;
@@ -103,12 +94,6 @@
             nav a {
                 padding: 6px 12px;
                 font-size: 0.9em;
-            }
-            .footer-content {
-                padding: 10px;
-            }
-            footer img {
-                height: 50px;
             }
         }
     </style>
@@ -142,14 +127,11 @@
         </section>
     </main>
     <footer>
-        <div class="footer-content">
-            <div class="footer-text">
-                <b>CONTACT US</b><br>
-                Email: high5semi@gmail.com<br>
-                Address: Unit 309B, Floor 5/F, 5W Building, HKSP, Shatin, Hong Kong<br>
-                ©2024 All rights reserved by High5 Semiconductor
-            </div>
-            <img src="logo.png" alt="Company Logo">
+        <div class="footer-text">
+            <b>CONTACT US</b><br>
+            Email: high5semi@gmail.com<br>
+            Address: Unit 309B, Floor 5/F, 5W Building, HKSP, Shatin, Hong Kong<br>
+            ©2024 All rights reserved by High5 Semiconductor
         </div>
     </footer>
 </body>
