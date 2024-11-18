@@ -15,95 +15,143 @@
         header {
             background-color: white;
             color: #0F4499;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 15px;
+            text-align: center;
         }
         header h1 {
             margin: 0;
             padding: 0;
+            font-size: 1.5em;
         }
         header img {
-            position: absolute;
-            right: 20px;
-            top: 10px;
-            height: 80px;
+            height: 200px; /* 電腦端logo尺寸 */
+            margin-top: 15px;
         }
         nav {
+            background-color: white;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        .nav-links {
             display: flex;
             justify-content: center;
-            background-color: white;
-            padding: 10px 0;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         nav a {
             color: #0F4499;
-            padding: 0 15px;
+            padding: 8px 15px;
             text-decoration: none;
             text-align: center;
             font-weight: bold;
+            white-space: nowrap;
         }
         nav a:hover, nav .active {
             background-color: #ddd;
             color: black;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
         .language-switch {
-            margin-left: 20px;
+            text-align: center;
+            margin-top: 10px;
+            padding: 5px;
         }
         main {
-            padding: 20px;
+            padding: 15px;
             max-width: 800px;
             margin: 0 auto;
         }
-		.member-profile {
-            margin-bottom: 40px;
+        .member-profile {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .member-profile img {
-            width: 150px;
+            width: 200px;
             height: auto;
             display: block;
-            margin-bottom: 10px;
+            margin: 0 auto 15px;
+            border-radius: 5px;
         }
         .member-details {
-            font-size: 1em;
+            font-size: 1.1em;
             line-height: 1.6;
         }
-        .label {
+        .founder-label {
+            color: #0F4499;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             font-size: 1.4em;
-                }
+        }
+        .title-name {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .title-name strong {
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 5px;
+            color: #0F4499;
+        }
         footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
             background-color: white;
             color: #0F4499;
+            padding: 20px;
             margin-top: 20px;
-        }
-        footer img {
-            height: 100px;
+            text-align: center;
         }
         .footer-text {
             line-height: 1.8;
-            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 移動端適配 */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.2em;
+            }
+            header img {
+                height: 100px; /* 移動端logo尺寸 */
+            }
+            nav {
+                padding: 5px;
+            }
+            nav a {
+                padding: 6px 12px;
+                font-size: 0.9em;
+            }
+            .member-profile {
+                padding: 15px;
+            }
+            .member-profile img {
+                width: 150px;
+            }
+            .member-details {
+                font-size: 1em;
+            }
+            .title-name strong {
+                font-size: 1.1em;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>高武半導體（香港）有限公司</h1>
-        <img src="logo.png" alt="Company Logo">
+        <img src="logo.png" alt="公司標誌">
     </header>
     <nav>
-        <a href="home_hk.html">首頁</a>
-        <a href="news_hk.html">新聞</a>
-        <a href="products_hk.html">產品</a>
-        <a href="design_service_hk.html">設計服務</a>
-        <a href="members_hk.html" class="active">成員</a>
-        <a href="contact_hk.html">聯絡我們</a>
+        <div class="nav-links">
+            <a href="home_hk.html">首頁</a>
+            <a href="news_hk.html">新聞</a>
+            <a href="products_hk.html">產品</a>
+            <a href="design_service_hk.html">設計服務</a>
+            <a href="members_hk.html" class="active">成員</a>
+            <a href="contact_hk.html">聯絡我們</a>
+        </div>
         <div class="language-switch">
             <a href="members_en.html">Eng</a> | 
             <a href="members_cn.html">简体中文</a> | 
@@ -113,74 +161,85 @@
     <main>
         <section id="members">
             <div class="member-profile">
-                <div class="label">創始人</div>
+                <div class="founder-label">創始人</div>
                 <img src="Prof Yue.jpg" alt="Prof. C. Patrick Yue">
+                <div class="title-name">
+                    <strong>董事長</strong>
+                    <strong>俞捷教授</strong>
+                </div>
                 <div class="member-details">
-                    <strong>董事長</strong><br>
-                    <strong>俞捷教授</strong><br>
                     斯坦福大學博士<br>
-					IEEE 和 Optica 會士<br>
-					香港科技大學電子與計算機工程學系教授<br>
-					1998年共同創立Atheros Communications，被高通以37億美元收購<br>
-					2002年加入Aeluros（現為博通）擔任代工廠生產經理<br>
-					2015年起任香港ITC企業支持計畫（ESS）小組成員<br>
-					第十一屆光華工程科技青年獎<br>
-					香港6G项目AoE聯合首席研究員</p>
+                    IEEE 和 Optica 會士<br>
+                    香港科技大學電子與計算機工程學系教授<br>
+                    1998年共同創立Atheros Communications，被高通以37億美元收購<br>
+                    2002年加入Aeluros（現為博通）擔任代工廠生產經理<br>
+                    2015年起任香港ITC企業支持計畫（ESS）小組成員<br>
+                    第十一屆光華工程科技青年獎<br>
+                    香港6G项目AoE聯合首席研究員
                 </div>
             </div>
+
+            <div class="founder-label">聯合創始人</div>
+
             <div class="member-profile">
-                <div class="label">聯合創始人</div>
                 <img src="Dr Chi Law.jpg" alt="Dr. Chi Law">
+                <div class="title-name">
+                    <strong>總經理</strong>
+                    <strong>羅志耀博士</strong>
+                </div>
                 <div class="member-details">
-                    <strong>總經理</strong><br>
-                    <strong>羅志耀博士</strong><br>
                     加州大學大衛斯分校博士<br>
-					加州大學伯克利分校學士<br>
-					曾任高通、安華高和三星的設計主管<br>
+                    加州大學伯克利分校學士<br>
+                    曾任高通、安華高和三星的設計主管<br>
                     南京升新科技總經理<br>
                     升新科技5G RF芯片項目創始人<br>
                     帶領升新科技2024年實現3000萬人民幣盈利
                 </div>
             </div>
+
             <div class="member-profile">
-              
                 <img src="Prof Wong.jpg" alt="Prof. Man Hoi Wong">
+                <div class="title-name">
+                    <strong>首席技術官</strong>
+                    <strong>黃文海教授</strong>
+                </div>
                 <div class="member-details">
-                    <strong>首席技術官</strong><br>
-                    <strong>黃文海教授</strong><br>
                     加州大學聖塔芭芭拉分校博士<br>
-        IEEE高級會員<br>
-        香港科技大學電子與計算機工程學系副教授<br>
-        寬禁帶和超寬禁帶半導體研究專家</p>
+                    IEEE高級會員<br>
+                    香港科技大學電子與計算機工程學系副教授<br>
+                    寬禁帶和超寬禁帶半導體研究專家
                 </div>
             </div>
+
             <div class="member-profile">
-               
                 <img src="Stanley Li.png" alt="Stanley Li">
+                <div class="title-name">
+                    <strong>執行副總裁</strong>
+                    <strong>李仕勝</strong>
+                </div>
                 <div class="member-details">
-                    <strong>執行副總裁</strong><br>
-                    <strong>李仕勝</strong><br>
                     加州大學大衛斯分校學士<br>
-					北大和港大EMBA<br>
-					北京海外高層次人才領軍人物，國家A級專家<br>
-					曾在AMD、IDT、惠普和思科工作<br>
-					鴻智電通 CEO<br>
-					2023年實現1000萬人民幣盈利</p>
+                    北大和港大EMBA<br>
+                    北京海外高層次人才領軍人物，國家A級專家<br>
+                    曾在AMD、IDT、惠普和思科工作<br>
+                    鴻智電通 CEO<br>
+                    2023年實現1000萬人民幣盈利
                 </div>
             </div>
+
             <div class="member-profile">
-                
                 <img src="Matthew Ma.jpg" alt="Matthew Ma">
+                <div class="title-name">
+                    <strong>射頻積體電路設計主管</strong>
+                    <strong>馬睿濤</strong>
+                </div>
                 <div class="member-details">
-                    <strong>射頻積體電路設計主管</strong><br>
-                    <strong>馬睿濤</strong><br>
                     香港科技大學集成電路設計工程碩士<br>
-					香港科技大學電子與計算機工程學系博士生<br>
-					從事GaN毫米波功率放大器和寬頻激光驅動電路設計</p>
+                    香港科技大學電子與計算機工程學博士生<br>
+                    從事GaN毫米波功率放大器和寬頻激光驅動電路設計
                 </div>
             </div>
         </section>
-
     </main>
     <footer>
         <div class="footer-text">
@@ -189,7 +248,6 @@
             地址: 香港新界香港科學園5W大樓5樓309B室<br>
             ©2024 高武半導體保留所有權利
         </div>
-        <img src="logo.png" alt="Company Logo">
     </footer>
 </body>
 </html>
